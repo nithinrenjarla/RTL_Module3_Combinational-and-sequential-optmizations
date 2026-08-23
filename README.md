@@ -56,10 +56,11 @@ assign y = 1'b0;
 
 This reduces unnecessary hardware.
 
-▣ 5. Sequential Logic Optimization
+# 5. Sequential Logic Optimization
 Sequential optimization deals with circuits containing memory elements such as flip-flops and registers.
 Yosys identifies the sequential behavior described in Verilog and maps it to suitable flip-flop cells.
 For example:
+
 always @(posedge clk, posedge reset)
 begin
     if(reset)
@@ -67,9 +68,11 @@ begin
     else
         q <= 1'b1;
 end
+
 This represents a flip-flop with reset behavior.
-📸 Screenshot 5 – Keep here:
-Your screenshot showing the dff_const1.v Verilog code in GVim.
+
+<img width="700" alt="dff_const1.v" src="https://github.com/user-attachments/assets/c3790bd2-968e-4208-aebf-74de7217f872" />
+
 ▣ 6. Flip-Flop Optimization and Mapping
 During synthesis, generic flip-flop representations such as:
 $DFF
