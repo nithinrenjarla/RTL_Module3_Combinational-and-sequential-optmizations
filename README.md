@@ -36,20 +36,26 @@ Larger hardware
 Increased power consumption
  <img width="700" alt="yosys" src="https://github.com/user-attachments/assets/4521d893-7c06-4228-b7b1-1dc28cf67eb0" />
 
-▣ 4. Constant Propagation
+# 4. Constant Propagation
 Constant propagation replaces signals whose values are known constants with those constant values.
-Example
+# Example
 If:
-assign y = a & 1'b1;
+assign y = a & 1'b1; 
+
 Yosys can simplify this to:
+
 assign y = a;
+
 Similarly,
+
 assign y = a & 1'b0;
+
 can be simplified to:
+
 assign y = 1'b0;
+
 This reduces unnecessary hardware.
-📸 Screenshot 4 – Keep here:
-Screenshot showing the constant optimization result/terminal output.
+
 ▣ 5. Sequential Logic Optimization
 Sequential optimization deals with circuits containing memory elements such as flip-flops and registers.
 Yosys identifies the sequential behavior described in Verilog and maps it to suitable flip-flop cells.
