@@ -212,6 +212,25 @@ endmodule
 ```
 <img width="700" alt="dff const3 gtk" src="https://github.com/user-attachments/assets/b42d7133-7f18-48f0-acc8-138cb3ff98dc" />
 
+# 12. Synthesized D Flip-Flop Circuit
+Information The D Flip-Flop design is synthesized using Yosys. The generated circuit is mapped to SKY130 standard cells.
+
+# Commands
+```verilog
+yosys
+
+read_verilog dff_const3.v
+
+synth -top dff_const3
+
+show
+```
+<img width="700" alt="dff const3 show" src="https://github.com/user-attachments/assets/b5390247-712b-48dd-b17d-720b1247698a" />
+
+
+
+
+
 
 ▣ 7. RTL Visualization Using show
 The Yosys show command generates a graphical representation of the synthesized design.
