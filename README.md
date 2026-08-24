@@ -298,23 +298,30 @@ gvim counter_opt_net.v
 
 
 
+
+
 <img width="700"  alt="counter editted" src="https://github.com/user-attachments/assets/98ddd1b3-a187-4154-977e-5e27b8e4dff1" />
 
 
 # 17. Importance of Optimization
 ◇ Area
 Removing redundant logic can reduce the number of standard cells required, which can reduce the overall chip area.
+
 ◇ Power
 Fewer unnecessary switching elements can reduce dynamic power consumption.
+
 ◇ Timing
 Simplified logic can reduce propagation delay and improve timing performance.
+
 ◇ Hardware Efficiency
 Optimization allows the required functionality to be implemented with fewer hardware resources.
 Therefore, optimization is an essential step in converting RTL into an efficient physical implementation.
 
 # 18. CONCLUSION
 Module 3 provided practical experience with combinational and sequential RTL optimization using Yosys. The experiments demonstrated how RTL descriptions are transformed into optimized hardware structures.
+
 The exercises covered Boolean simplification, constant propagation, removal of unnecessary logic, sequential optimization, flip-flop mapping, circuit visualization, and synthesis statistics.
+
 The counter and flip-flop examples helped demonstrate how optimization techniques can be applied to sequential designs while maintaining their intended functionality.
 Overall, the module provided a practical understanding of how RTL optimization influences hardware area, power, timing, and implementation efficiency.
 
