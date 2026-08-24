@@ -141,13 +141,31 @@ iverilog -o dff_const1.out dff_const1.v tb_dff_const1.v
 vvp dff_const1.out
 gtkwave tb_dff_const1.vcd
 ```
+# 8. Simulation Waveform – dff_const2
+Description
+Simulation waveform of dff_const2 showing a constant output of 1 because both reset and normal-operation conditions assign q = 1'b1.
+# code
+```verilog
+```verilog
+// dff_const2.v
+module dff_const2(input clk, input reset, output reg q);
 
+always @(posedge clk, posedge reset)
+begin
+    if(reset)
+        q <= 1'b1;
+    else
+        q <= 1'b1;
+end
 
-
-
-
-
-
+endmodule
+```
+# commands
+```bash
+iverilog -o dff_const2.out dff_const2.v tb_dff_const2.v
+vvp dff_const2.out
+gtkwave tb_dff_const2.vcd
+```
 
 ▣ 7. RTL Visualization Using show
 The Yosys show command generates a graphical representation of the synthesized design.
