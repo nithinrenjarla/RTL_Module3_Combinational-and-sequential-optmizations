@@ -179,6 +179,19 @@ show
 ```
 <img width="700"  alt="dfff" src="https://github.com/user-attachments/assets/aa46ee2a-3c17-45d6-8222-d009df2d75e4" />
 
+# 10. Sequential Logic Optimization Result
+Description The optimized circuit after sequential constant propagation. Redundant logic is removed by the synthesis tool.
+
+# Commands
+```verilog
+yosys
+read_liberty -lib sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_const2.v
+synth -top dff_const2
+abc -liberty sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+<img width="700" alt="dff_const2" src="https://github.com/user-attachments/assets/7f1cd827-5c10-46a2-a867-db9b59d2f6d9" />
 
 
 ▣ 7. RTL Visualization Using show
