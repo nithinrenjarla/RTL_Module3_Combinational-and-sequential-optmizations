@@ -227,6 +227,40 @@ show
 ```
 <img width="700" alt="dff const3 show" src="https://github.com/user-attachments/assets/b5390247-712b-48dd-b17d-720b1247698a" />
 
+# 13. Counter Optimization
+Information This experiment demonstrates optimization by removing unused outputs from a counter circuit.
+
+# Code
+```verilog
+module counter_opt(input clk, input reset, output q);
+
+reg [2:0] count;
+
+assign q = count[0];
+
+always @(posedge clk, posedge reset)
+begin
+    if(reset)
+        count <= 3'b000;
+    else
+        count <= count + 1;
+end
+
+endmodule
+```
+# commands
+yosys
+
+read_verilog counter_opt.v
+
+synth -top counter_opt
+
+
+show
+```
+
+
+
 
 
 
