@@ -259,57 +259,6 @@ synth -top counter_opt
 show
 ```
 
-
-
-
-
-
-
-
-▣ 7. RTL Visualization Using show
-The Yosys show command generates a graphical representation of the synthesized design.
-Example:
-yosys> show
-The resulting diagram helps us understand:
-Inputs
-Outputs
-Logic cells
-Flip-flops
-Connections between cells
-In your experiment, the generated diagram showed a SKY130 flip-flop cell connected to the reset and output signals.
-📸 Screenshot 7 – Keep here:
-The screenshot showing the Graphviz/Yosys circuit diagram with:
-sky130_fd_sc_hd__...
-This should go immediately below this section.
-▣ 8. Synthesis Statistics
-Yosys provides statistics after synthesis to show how the design has been converted into hardware.
-Important information includes:
-Parameter
-Meaning
-Number of wires
-Total wires in the design
-Number of ports
-Input/output ports
-Number of cells
-Hardware cells used
-$DFF / $DFF_PP
-Flip-flop elements
-Number of processes
-Procedural blocks
-Number of memories
-Memory elements
-For example, your terminal displayed:
-=== dff_const3 ===
-
-Number of wires:       4
-Number of wire bits:   4
-Number of public wires: 4
-Number of ports:       3
-Number of cells:       2
-📸 Screenshot 8 – Keep here:
-Your screenshot showing:
-“Printing statistics”
-and
 “Found and reported 0 problems.”
 ▣ 9. Counter Optimization
 A counter is a sequential circuit that changes its stored value on every clock edge.
