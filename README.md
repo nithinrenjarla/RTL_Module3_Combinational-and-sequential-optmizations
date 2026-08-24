@@ -117,6 +117,35 @@ vim dff_const2.v
 ```
 <img width="700" alt="dfffff" src="https://github.com/user-attachments/assets/8e40e3af-156f-4827-b693-3926b49ab5df" />
 
+# 7.Simulation Waveform – dff_const1
+Description
+
+Simulation waveform showing the behavior of dff_const1. The output changes according to the reset signal and clock edge.
+# Code
+```verilog
+module dff_const1(input clk, input reset, output reg q);
+
+always @(posedge clk, posedge reset)
+begin
+    if(reset)
+        q <= 1'b0;
+    else
+        q <= 1'b1;
+end
+
+endmodule
+```
+# Commands
+```verilog
+iverilog -o dff_const1.out dff_const1.v tb_dff_const1.v
+vvp dff_const1.out
+gtkwave tb_dff_const1.vcd
+```
+
+
+
+
+
 
 
 
