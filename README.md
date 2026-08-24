@@ -298,68 +298,10 @@ gvim counter_opt_net.v
 
 
 
-<img width="500"  alt="counter editted" src="https://github.com/user-attachments/assets/98ddd1b3-a187-4154-977e-5e27b8e4dff1" />
+<img width="7 00"  alt="counter editted" src="https://github.com/user-attachments/assets/98ddd1b3-a187-4154-977e-5e27b8e4dff1" />
 
 
-
-
-
-
-
-“Found and reported 0 problems.”
-▣ 9. Counter Optimization
-A counter is a sequential circuit that changes its stored value on every clock edge.
-Your counter_opt2.v contains:
-reg [2:0] count;
-
-assign q = count[0];
-
-always @(posedge clk, posedge reset)
-begin
-    if(reset)
-        count <= 3'b000;
-    else
-        count <= count + 1;
-end
-Here, the 3-bit register increments by one on every positive clock edge.
-The output is taken from:
-count[0]
-Therefore, the output changes according to the least significant bit of the counter.
-📸 Screenshot 9 – Keep here:
-Your screenshot of counter_opt2.v code in GVim.
-▣ 10. Optimization of Counter Logic
-The counter demonstrates how sequential logic can be optimized while preserving the required functionality.
-The synthesis process can:
-Remove unnecessary logic.
-Simplify constant expressions.
-Optimize register connections.
-Reduce redundant hardware.
-Map registers to available standard cells.
-📸 Screenshot 10 – Keep here:
-Terminal screenshot showing the Yosys optimization process for the counter.
-▣ 11. Verification / Check Pass
-After optimization, Yosys performs checks to identify obvious problems in the synthesized design.
-The terminal output may show:
-Executing CHECK pass
-Checking module ...
-Found and reported 0 problems.
-This indicates that no obvious structural problems were detected during the check.
-📸 Screenshot 11 – Keep here:
-Use your screenshot where the terminal clearly shows:
-“Found and reported 0 problems.”
-▣ 12. Key Observations
-KEY OBSERVATIONS
-RTL descriptions can be converted into optimized hardware structures.
-Boolean expressions can be simplified during synthesis.
-Constant propagation removes unnecessary logic.
-Unused wires and cells can be eliminated.
-Sequential RTL is represented using flip-flop elements.
-Generic flip-flops can be mapped to SKY130 standard cells.
-The show command provides a graphical view of the synthesized design.
-Yosys statistics help analyze the hardware generated from RTL.
-Counter circuits contain both sequential and combinational behavior.
-Optimization reduces unnecessary hardware while maintaining functionality.
-▣ 13. Importance of Optimization
+# 17. Importance of Optimization
 ◇ Area
 Removing redundant logic can reduce the number of standard cells required, which can reduce the overall chip area.
 ◇ Power
@@ -369,8 +311,8 @@ Simplified logic can reduce propagation delay and improve timing performance.
 ◇ Hardware Efficiency
 Optimization allows the required functionality to be implemented with fewer hardware resources.
 Therefore, optimization is an essential step in converting RTL into an efficient physical implementation.
-▣ 14. Conclusion
-CONCLUSION
+
+# 18. CONCLUSION
 Module 3 provided practical experience with combinational and sequential RTL optimization using Yosys. The experiments demonstrated how RTL descriptions are transformed into optimized hardware structures.
 The exercises covered Boolean simplification, constant propagation, removal of unnecessary logic, sequential optimization, flip-flop mapping, circuit visualization, and synthesis statistics.
 The counter and flip-flop examples helped demonstrate how optimization techniques can be applied to sequential designs while maintaining their intended functionality.
