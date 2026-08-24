@@ -285,6 +285,24 @@ gvim counter_opt_net.v
 ```
 <img width="700" alt="counter_opt" src="https://github.com/user-attachments/assets/39f0a0fd-1dd7-4dd8-bec4-94ba36f9d763" />
 
+# 16. Optimized Counter Netlist
+Information The generated netlist shows the optimized hardware after synthesis.
+
+# Commands
+```verilog
+write_verilog -noattr counter_opt_net.v
+
+gvim counter_opt_net.v
+```
+<img width="700"  alt="counter opt editted" src="https://github.com/user-attachments/assets/d4edb5b6-1db9-4f40-b9f8-85331fb58b76" />
+
+
+
+<img width="500"  alt="counter editted" src="https://github.com/user-attachments/assets/98ddd1b3-a187-4154-977e-5e27b8e4dff1" />
+
+
+
+
 
 
 
