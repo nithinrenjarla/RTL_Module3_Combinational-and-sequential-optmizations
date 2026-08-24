@@ -73,22 +73,47 @@ This represents a flip-flop with reset behavior.
 
 <img width="700" alt="dff_const1.v" src="https://github.com/user-attachments/assets/c3790bd2-968e-4208-aebf-74de7217f872" />
 
-▣ 6. Flip-Flop Optimization and Mapping
-During synthesis, generic flip-flop representations such as:
-$DFF
-$DFF_PN
-$DFF_PPI
-are converted into technology-specific SKY130 cells.
-For example, your terminal showed mapping such as:
-mapped 1 $DFF_PN cells
-mapped 1 $DFF_PNI cells
-This means Yosys has converted the generic flip-flop into appropriate SKY130 library cells.
-📸 Screenshot 6 – Keep here:
-Your screenshot showing:
-“Executing DFFLEGALIZE pass”
-and
-“mapped 1 $DFF...”
-This is a very important screenshot. Keep it here.
+
+6. Verilog Code for D Flip-Flop Constant Propagation
+Description
+This Verilog code demonstrates sequential constant propagation using two D Flip-Flop designs (dff_const1 and dff_const2).
+The examples show how synthesis optimization depends on whether the output Q can always be reduced to a constant value. In dff_const1, Q is not always constant because reset can force it to 0. In dff_const2, Q is always 1, so the flip-flop becomes redundant during synthesis.
+### Verilog Code – dff_const1.v
+```verilog
+// dff_const1.v
+module dff_const1(input clk, input reset, output reg q);
+
+always @(posedge clk, posedge reset)
+begin
+    if(reset)
+        q <= 1'b0;
+    else
+        q <= 1'b1;
+end
+
+endmodule
+```
+### Verilog Code – dff_const2.v
+```verilog
+// dff_const2.v
+module dff_const2(input clk, input reset, output reg q);
+
+always @(posedge clk, posedge reset)
+begin
+    if(reset)
+        q <= 1'b1;
+    else
+        q <= 1'b1;
+end
+
+endmodule
+```
+# Commands
+Open the Verilog files using:
+vim dff_const1.v
+vim dff_const2.v
+
+
 ▣ 7. RTL Visualization Using show
 The Yosys show command generates a graphical representation of the synthesized design.
 Example:
