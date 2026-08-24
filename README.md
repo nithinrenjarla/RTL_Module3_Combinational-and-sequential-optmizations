@@ -1,4 +1,4 @@
-<img width="958" height="930" alt="dff" src="https://github.com/user-attachments/assets/2b1d4c27-76f5-47f0-b607-3c875eda40d2" />
+
 # RTL_Module3_Combinational-and-sequential-optmizations
 #Module 3 -Combinational and sequential optmizations using verilog and Yosys
 
@@ -72,7 +72,8 @@ end
 
 This represents a flip-flop with reset behavior.
 
-<img width="700" alt="dff_const1.v" src="https://github.com/user-attachments/assets/c3790bd2-968e-4208-aebf-74de7217f872" />
+<img width="700" alt="dfffff" src="https://github.com/user-attachments/assets/8e40e3af-156f-4827-b693-3926b49ab5df" />
+
 
 
 6. Verilog Code for D Flip-Flop Constant Propagation
@@ -115,7 +116,8 @@ Open the Verilog files using:
 vim dff_const1.v
 vim dff_const2.v
 ```
-<img width="700"  alt="dff" src="https://github.com/user-attachments/assets/150f07e8-ad53-4c91-ace7-80c8720487ab" />
+<img width="700" alt="dfffff" src="https://github.com/user-attachments/assets/8e40e3af-156f-4827-b693-3926b49ab5df" />
+
 
 
 
