@@ -110,8 +110,9 @@ endmodule
 ```
 # Commands
 Open the Verilog files using:
-```vim dff_const1.v
-   vim dff_const2.v
+```verilog
+vim dff_const1.v
+vim dff_const2.v
 ```
 
 
