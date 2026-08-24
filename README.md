@@ -298,7 +298,7 @@ gvim counter_opt_net.v
 
 
 
-<img width="7 00"  alt="counter editted" src="https://github.com/user-attachments/assets/98ddd1b3-a187-4154-977e-5e27b8e4dff1" />
+<img width="700"  alt="counter editted" src="https://github.com/user-attachments/assets/98ddd1b3-a187-4154-977e-5e27b8e4dff1" />
 
 
 # 17. Importance of Optimization
