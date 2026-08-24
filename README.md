@@ -249,6 +249,7 @@ end
 endmodule
 ```
 # commands
+```verilog
 yosys
 
 read_verilog counter_opt.v
@@ -258,6 +259,34 @@ synth -top counter_opt
 
 show
 ```
+# 14. Counter Optimization Result
+Information The synthesized counter retains only the required logic after optimization.
+
+# Commands
+```verilog
+yosys
+
+read_verilog counter_opt.v
+
+synth -top counter_opt
+
+show
+```
+<img width="700" alt="counter_opt" src="https://github.com/user-attachments/assets/28b88513-b7a6-4b31-89bc-20b811954914" />
+
+# 15. Optimized Counter Circuit
+Information The optimized gate-level implementation contains only the necessary flip-flops and logic.
+
+# Commands
+```verilog
+write_verilog -noattr counter_opt_net.v
+
+gvim counter_opt_net.v
+```
+<img width="700" alt="counter_opt" src="https://github.com/user-attachments/assets/39f0a0fd-1dd7-4dd8-bec4-94ba36f9d763" />
+
+
+
 
 “Found and reported 0 problems.”
 ▣ 9. Counter Optimization
