@@ -193,6 +193,25 @@ show
 ```
 <img width="700" alt="dff_const2" src="https://github.com/user-attachments/assets/7f1cd827-5c10-46a2-a867-db9b59d2f6d9" />
 
+# 11. D Flip-Flop Constraint Simulation
+Information This experiment demonstrates the simulation of a D Flip-Flop with constant propagation. The waveform verifies the behavior of the flip-flop during reset and clock transitions.
+
+# Code
+```verilog
+module dff_const3(input clk, input reset, output reg q);
+
+always @(posedge clk)
+begin
+    if(reset)
+        q <= 1'b0;
+    else
+        q <= 1'b1;
+end
+
+endmodule
+```
+<img width="700" alt="dff const3 gtk" src="https://github.com/user-attachments/assets/b42d7133-7f18-48f0-acc8-138cb3ff98dc" />
+
 
 ▣ 7. RTL Visualization Using show
 The Yosys show command generates a graphical representation of the synthesized design.
