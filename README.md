@@ -117,7 +117,7 @@ vim dff_const2.v
 ```
 <img width="700" alt="dfffff" src="https://github.com/user-attachments/assets/8e40e3af-156f-4827-b693-3926b49ab5df" />
 
-# 7.Simulation Waveform – dff_const1
+# 7.Simulation – dff_const1
 Description
 
 Simulation waveform showing the behavior of dff_const1. The output changes according to the reset signal and clock edge.
@@ -141,7 +141,7 @@ iverilog -o dff_const1.out dff_const1.v tb_dff_const1.v
 vvp dff_const1.out
 gtkwave tb_dff_const1.vcd
 ```
-# 8. Simulation Waveform – dff_const2
+# 8. Simulation – dff_const2
 Description
 Simulation waveform of dff_const2 showing a constant output of 1 because both reset and normal-operation conditions assign q = 1'b1.
 # code
@@ -166,6 +166,20 @@ iverilog -o dff_const2.out dff_const2.v tb_dff_const2.v
 vvp dff_const2.out
 gtkwave tb_dff_const2.vcd
 ```
+# 9. D Flip-Flop Netlist Before Optimization
+Description The synthesized netlist before applying sequential optimization.
+# commands
+```verilog
+yosys
+read_liberty -lib sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_const1.v
+synth -top dff_const1
+abc -liberty sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+<img width="700"  alt="dfff" src="https://github.com/user-attachments/assets/aa46ee2a-3c17-45d6-8222-d009df2d75e4" />
+
+
 
 ▣ 7. RTL Visualization Using show
 The Yosys show command generates a graphical representation of the synthesized design.
