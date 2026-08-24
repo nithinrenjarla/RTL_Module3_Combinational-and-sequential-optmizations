@@ -72,11 +72,10 @@ end
 
 This represents a flip-flop with reset behavior.
 
-<img width="700" alt="dfffff" src="https://github.com/user-attachments/assets/8e40e3af-156f-4827-b693-3926b49ab5df" />
+<img width="700"  alt="dff const1" src="https://github.com/user-attachments/assets/793836c1-e464-4b69-be9a-444711108c40" />
 
 
-
-6. Verilog Code for D Flip-Flop Constant Propagation
+# 6. Verilog Code for D Flip-Flop Constant Propagation
 Description
 This Verilog code demonstrates sequential constant propagation using two D Flip-Flop designs (dff_const1 and dff_const2).
 The examples show how synthesis optimization depends on whether the output Q can always be reduced to a constant value. In dff_const1, Q is not always constant because reset can force it to 0. In dff_const2, Q is always 1, so the flip-flop becomes redundant during synthesis.
